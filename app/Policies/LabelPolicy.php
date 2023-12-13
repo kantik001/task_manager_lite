@@ -13,7 +13,7 @@ class LabelPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class LabelPolicy
      */
     public function view(User $user, Label $label): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class LabelPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class LabelPolicy
      */
     public function update(User $user, Label $label): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -45,7 +45,7 @@ class LabelPolicy
      */
     public function delete(User $user, Label $label): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class LabelPolicy
      */
     public function restore(User $user, Label $label): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -61,6 +61,6 @@ class LabelPolicy
      */
     public function forceDelete(User $user, Label $label): bool
     {
-        //
+        return false;
     }
 }

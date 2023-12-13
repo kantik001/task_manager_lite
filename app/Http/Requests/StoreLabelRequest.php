@@ -11,7 +11,7 @@ class StoreLabelRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class StoreLabelRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|unique:labels,name|max:255',
+            'description' => 'max:255'
         ];
     }
 }
